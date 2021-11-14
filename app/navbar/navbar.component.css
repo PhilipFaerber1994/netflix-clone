@@ -1,0 +1,29 @@
+.navbar-custom{
+    background-color: #141414;
+    color: white;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.navbar-brand{
+    margin-left: 30px;
+    margin-right: 30px;
+}  
+
+.nav-link{
+    color: white;
+    font-size: small;
+    margin-right: 15px;
+}
+
+.nav-link:hover{
+    color: #9F9F9F;
+}
+
+.search-closed{
+    margin-right: 30px;
+}
+
+#search-input-field{
+    padding: 5px;
+}
