@@ -1,0 +1,16 @@
+body{
+    background-color: #141414;
+    color: white;
+}
+
+button, .all-buttons{
+    padding: 10px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 7px;
+}
+
+.all-buttons:hover{
+    background-color: #9F9F9F;
+    border-color: #9F9F9F
+}
