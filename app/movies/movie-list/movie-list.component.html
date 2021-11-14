@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+
+      <!-- <div class="col">
+        <form [formGroup]="addMovie" (submit)="addToWatchlist(addMovie)">
+          <table>
+            <tr *ngFor="let movie of movieList">
+              <td> <input type="text" formControlName="id" [(ngModel)]="movie.id"> </td>
+              <td> <input type="text" formControlName="name" [(ngModel)]="movie.name"> </td>
+              <td><img [src]="movie.imageUrl" width="196.88" height="109.59" ></td>
+              <td> <input type="text" formControlName="length" [(ngModel)]="movie.length"> </td>
+              <td> <input type="text" formControlName="genre" [(ngModel)]="movie.genre"> </td>
+              <td> <input class="all-buttons" type="button" value="Abspielen"></td>
+              <td> <input class="all-buttons" type="submit" value="Zu Watchlist"></td>
+            </tr>
+          </table>
+        <table>
+            <tr *ngFor="let movie of movieList">
+              <td [(ngModel)]="movie.id">{{ movie.id }} </td>
+              <td [(ngModel)]="movie.name">{{ movie.name }} </td>
+              <td [(ngModel)]="movie.imageUrl"> <img [src]="movie.imageUrl" width="196.88" height="109.59" > </td>
+              <td [(ngModel)]="movie.length"> {{ movie.length }} </td>
+              <td [(ngModel)]="movie.genre"> {{ movie.genre}} </td>
+              <td> <input class="all-buttons" type="button" value="Abspielen"></td>
+              <td> <input class="all-buttons" type="submit" value="Zu Watchlist"></td>
+            </tr>
+          </table>
+        </form>
+      </div> -->
+
+     
+
+
+
+        <h5>Empfohlen</h5>
+
+        <carousel [itemsPerSlide]="itemsPerSlide"
+          [singleSlideOffset]="singleSlideOffset"
+          [startFromIndex]="6"
+          [interval]="0">
+          <slide *ngFor="let movie of movieList let index=index">
+            <div [hidden]="!showMovieOptions" class="show-movie-options-on-mouseover" [ngClass]="{'show-movie-options-on-mouseover':showMovieOptions==true}" *ngIf="showMovieOptions" >{{movie.name}}</div>
+            <div (mouseover)="showMovieOptions=true" 
+            (mouseout)="showMovieOptions=false"
+            >
+              <span *ngIf="!showMovieOptions"></span>
+              
+              <img [src]="movie.imageUrl" width="196.88" height="109.59"  alt="">
+              
+            </div>
+            
+            <div class="carousel-caption">
+            </div>
+          </slide>
+        </carousel>
+
+        <!-- <h5>Thriller</h5>
+
+        <carousel [itemsPerSlide]="itemsPerSlide"
+          [singleSlideOffset]="singleSlideOffset"
+          [startFromIndex]="6"
+          [interval]="0">
+          <slide *ngFor="let movie of movieList; let index = index">
+            <img ng-show="movieList['Thriller']" [src]="movie.imageUrl" width="196.88" height="109.59"  alt="">
+            <<div class="carousel-caption">
+            </div> 
+          </slide>
+        </carousel> -->
+
+    </div>
+</div>

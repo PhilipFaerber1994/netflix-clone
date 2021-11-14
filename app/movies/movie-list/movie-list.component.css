@@ -1,0 +1,22 @@
+/* :host.h3{
+    margin-top: 100px;
+} */
+
+h5{
+    margin-top: 30px;
+}
+
+
+/* ng-template{
+    display: none;
+} */
+
+.show-movie-options-on-mouseover{
+    /* position: fixed; */
+    z-index: 1 !important;
+    height: 100px;
+    width: auto;
+    color: white;
+    border: 1px solid pink;
+    background-color: pink;
+}
